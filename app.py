@@ -4,9 +4,9 @@ import sys
 import configparser
 import os 
 
-# const_config_file = Path(os.environ.get('config_file' , '/etc/config/config.ini'))
+const_config_file = Path(os.environ.get('config_file' , '/etc/config/config.ini'))
 
-const_config_file = os.path.join((os.path.dirname(os.path.abspath(__file__))), 'config.ini')
+# const_config_file = os.path.join((os.path.dirname(os.path.abspath(__file__))), 'config.ini')
 
 const_conn_type_cos = r'MONGODB'
 
