@@ -1,5 +1,11 @@
 node {
-  echo "Hi this is a test "
+//   stage ('SCM Checkout'){}
+
+//   stage ('Build'){}
+
+//   stage('Deploy'){}
+
+ sh " docker --version "
 
    
 
