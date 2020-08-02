@@ -1,6 +1,7 @@
 node {
 
-    def Namespace = "ibm-dev"
+    
+    long BUILDNUM = System.currentTimeMillis()/ 1000
 
     
     stage('Pull Source Dev') {
@@ -31,7 +32,7 @@ node {
   stage('Deploy'){
 
          sh """
-            /usr/local/bin/kubectl config set-context --current --namepsace=ibm-develop
+            /usr/local/bin/kubectl config set-context --current --namepsace=ibm-dev
             /usr/local/bin/kubectl apply -f ${WORKSPACE}/deploysec.yaml
             """
 
