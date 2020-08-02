@@ -5,7 +5,11 @@ node {
 
 //   stage('Deploy'){}
 
- sh " docker --version "
+ sh """
+    
+  docker version 
+  
+  """
 
    
 
