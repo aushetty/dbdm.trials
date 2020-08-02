@@ -22,10 +22,7 @@ node {
          sh """
             cd ${WORKSPACE}/${BUILDNUM}
 
-            docker build -t sample_pyapp:${BUILDNUM} .
-            docker tag sample_pyapp:${BUILDNUM}  aushetty/sample_pyapp:latest . --no-cache
-            docker push aushetty/sample_pyapp:${BUILDNUM}
-            docker push aushetty/sample_pyapp:latest
+            cat Dockerfile
 
             """
 
