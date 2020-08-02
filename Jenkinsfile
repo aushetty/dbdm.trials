@@ -10,7 +10,8 @@ node {
        
         sh """  
                 mkdir -p ${WORKSPACE}/${BUILDNUM}
-                cd ${WORKSPACE}/${BUILDNUM}       
+                cd ${WORKSPACE}/${BUILDNUM} 
+                ls -l       
                 
          """
         
