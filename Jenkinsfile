@@ -11,7 +11,7 @@ node {
         sh """  
                 mkdir -p ${WORKSPACE}/${BUILDNUM}
                 cd ${WORKSPACE}/${BUILDNUM}       
-                find ${WORKSPACE}/ -maxdepth 1 -type f -print0 | xargs -0 mv -t .   
+                
          """
         
     }
