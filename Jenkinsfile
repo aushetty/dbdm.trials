@@ -31,7 +31,7 @@ node {
   stage('Deploy'){
 
          sh """
-            /usr/local/bin/kubectl config set-context --current --namepsace=ibm-dev
+            /usr/local/bin/kubectl config set-context --current --namespace=ibm-dev
             /usr/local/bin/kubectl apply -f ${WORKSPACE}/deploysec.yaml
             """
 
