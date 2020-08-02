@@ -8,23 +8,23 @@ node {
         
         git pull: 'master', changelog: true, poll: false, url: 'git@github.com:aushetty/dbdm.trials.git'
        
-        sh """  
+        sh '''
                 mkdir -p ${WORKSPACE}/${BUILDNUM}
                 cd ${WORKSPACE}/${BUILDNUM} 
                 ls -l       
                 
-         """
+        '''
         
     }
 
 
     stage ('Build') {
-         sh """
+         sh '''
             cd ${WORKSPACE}/${BUILDNUM}
 
             cat Dockerfile
 
-            """
+        '''
 
   }
 
