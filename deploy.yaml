@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-app
+  namespace: ibm-dev
+spec:
+  selector:
+    matchLabels:
+      app: sample-app
+  replicas: 1
+  template:
+    metadata: 
+      labels:
+        app: sample-app
+    spec:
+      containers:
+      - name: sample-app-container
+        image: aushetty/sample_pyapp:latest
+        ports:
+        - containerPort: 5000
+        envFrom:
+        - configMapRef:
+            name: appconfig
+        volumeMounts:
+        - name: appconfig
+          mountPath: /etc/config
+      volumes:
+      - name: appconfig
+        configMap:
+          name: appconfig
